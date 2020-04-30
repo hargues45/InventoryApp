@@ -163,7 +163,7 @@ section {
 .bodywrapper img {
     height: 500px;
     width: 500px;
-    animation: spin 3s linear infinite; 
+    animation: spin 15s linear infinite; 
 }
 
 @keyframes spin {
