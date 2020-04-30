@@ -10,4 +10,6 @@ urlpatterns = [
     path('dashboard/', include('dashboard.urls')),
     path('contact/', include('contact.urls')),
     path('inventory', include('inventory.urls')),
-]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]  
+
+urlpatterns += staticfiles_urlpatterns()
