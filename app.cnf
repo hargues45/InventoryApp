@@ -1,0 +1,6 @@
+[client]
+database = assetmgmt
+host = sql-feapps-01.flywheelenergy.com
+user = svcDjango
+password = DJ@ngoUncha1n3d!
+default-character-set = utf8

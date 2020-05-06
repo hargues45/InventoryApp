@@ -80,11 +80,9 @@ WSGI_APPLICATION = 'new_app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'AssetMgmt',
-        'USER': 'svcDjango',
-        'PASSWORD': 'DJ@ngoUncha1n3d!',
-        'HOST': 'sql-feapps-01.flywheelenergy.com',
-        'PORT': '',
+        'OPTIONS': {
+            'read_default_file': os.path.join(BASE_DIR,'app.cnf'),
+        },
     }
 }
 
