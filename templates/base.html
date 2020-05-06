@@ -16,7 +16,7 @@
                 <img class='logo' src="{% static '/photos/flywheel.jpg' %}">
             </div>
             <div class="navcontent">
-                <a href='#' class="nav-link">Home</a>                
+                <a href="{% url 'fwe-login' %}" class="nav-link">Home</a>                
                 <button class="dropdown">Inventory
                     <i class="fa fa-caret-down"></i>
                 </button>
@@ -25,7 +25,7 @@
                     <a href='#' class="dropdown-links">Servers</a>
                     <a href='#' class="dropdown-links">Workstations</a>
                 </div>
-                <a href='#' class="nav-link">Contacts</a>
+                <a href="{% url 'fwe-contact' %}" class="nav-link">Contacts</a>
                 <button class="dropdown1">Locations
                     <i class="fa fa-caret-down"></i>
                 </button>
@@ -46,10 +46,11 @@
     </header>
     <section>
         <div class="heading-bar">
-            <input type="text" placeholder="Search..">                        
+            <input type="text" placeholder="Search...">  
+            <button type="submit" class="submit-button">Submit</button>                      
         </div>
         <div class="bodywrapper">
-            <img src="{% static 'photos/Flywheellogo1.jpg' %}"
+            <img src="{% static 'photos/Flywheellogo1.jpg' %}">
             {% block content2 %}
             {% endblock content2 %}
         </div>

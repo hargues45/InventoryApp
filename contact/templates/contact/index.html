@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends 'base.html'%}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block header %}
+    <title>FWE - Contact</title>
+    <link rel="stylesheet" href='{% static "contact/css/styles.css" %}' type="text/css"> 
+    {% endblock header %}
+</head>
+<body>
+    {% block content2 %}
+    <div class="content-block">
+        <div class="items">
+            <h1 class="contact-name">Jonathan Hargues</h1>
+            <p class="business-name">Test Business</p>
+            <p class="contact-content">test@test.com</p>
+            <p class="contact-content">548-784-9888</p>
+            <p class="btn-ptag"><button  class="edit-btn">Edit</button></p>
+        </div>
+    </div>
+    {% endblock content2 %}    
+</body>
+</html>
