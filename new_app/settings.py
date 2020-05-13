@@ -85,7 +85,7 @@ DATABASES = {
         'PASSWORD': 'DJ@ngoUncha1n3d!',
         'HOST': 'sql-feapps-01.database.windows.net',
         'PORT': '1433',
-        'AUTOCOMMIT': False,
+        # 'AUTOCOMMIT': False,
         'OPTIONS': {
             'driver': 'ODBC Driver 17 for SQL Server'
         },
