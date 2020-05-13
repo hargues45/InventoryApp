@@ -87,7 +87,7 @@ DATABASES = {
         'PORT': '1433',
         'AUTOCOMMIT': False,
         'OPTIONS': {
-            'driver': 'ODBC Driver 17 for SQL Server'
+            'driver': "SQL Server Native Client 11.0"
         },
     }
 }
