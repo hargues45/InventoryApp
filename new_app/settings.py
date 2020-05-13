@@ -85,6 +85,7 @@ DATABASES = {
         'PASSWORD': 'DJ@ngoUncha1n3d!',
         'HOST': 'sql-feapps-01.flywheelenergy.com',
         'PORT': '1433',
+        'AUTOCOMMIT': False,
         'OPTIONS': {
             'driver': 'ODBC Driver 17 for SQL Server'
         },
