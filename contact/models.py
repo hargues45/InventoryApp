@@ -6,8 +6,8 @@ class Vendors(models.Model):
     vendor = models.CharField(db_column='Vendor', max_length=50, blank=True, null=True)  # Field name made lowercase.
     vendor_contact = models.CharField(db_column='Vendor_Contact', max_length=50, blank=True, null=True)  # Field name made lowercase.
     vendor_role = models.CharField(db_column='Vendor_Role', max_length=25, blank=True, null=True)  # Field name made lowercase.
-    vendor_address1 = models.CharField(db_column='Vendor_Address1', max_length=50, blank=True, null=True)  # Field name made lowercase.
-    vendor_address2 = models.CharField(db_column='Vendor_Address2', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    vendor_address = models.CharField(db_column='Vendor_Address1', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    vendor_email = models.CharField(db_column='Vendor_Address2', max_length=50, blank=True, null=True)  # Field name made lowercase.
     vendor_city = models.CharField(db_column='Vendor_City', max_length=50, blank=True, null=True)  # Field name made lowercase.
     vendor_state = models.CharField(db_column='Vendor_State', max_length=2, blank=True, null=True)  # Field name made lowercase.
     vendor_zip = models.CharField(db_column='Vendor_Zip', max_length=10, blank=True, null=True)  # Field name made lowercase.
@@ -28,8 +28,8 @@ class Vendorhistory(models.Model):
     vendor = models.CharField(db_column='Vendor', max_length=50, blank=True, null=True)  # Field name made lowercase.
     vendor_contact = models.CharField(db_column='Vendor_Contact', max_length=50, blank=True, null=True)  # Field name made lowercase.
     vendor_role = models.CharField(db_column='Vendor_Role', max_length=25, blank=True, null=True)  # Field name made lowercase.
-    vendor_address1 = models.CharField(db_column='Vendor_Address1', max_length=50, blank=True, null=True)  # Field name made lowercase.
-    vendor_address2 = models.CharField(db_column='Vendor_Address2', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    vendor_address = models.CharField(db_column='Vendor_Address1', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    vendor_email = models.CharField(db_column='Vendor_Address2', max_length=50, blank=True, null=True)  # Field name made lowercase.
     vendor_city = models.CharField(db_column='Vendor_City', max_length=50, blank=True, null=True)  # Field name made lowercase.
     vendor_state = models.CharField(db_column='Vendor_State', max_length=2, blank=True, null=True)  # Field name made lowercase.
     vendor_zip = models.CharField(db_column='Vendor_Zip', max_length=10, blank=True, null=True)  # Field name made lowercase.
