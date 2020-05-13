@@ -13,13 +13,15 @@
 <body>
     {% block content2 %}
     <div class="content-block">
+        {% for vendor in vendors %} 
         <div class="items">
-            <h1 class="contact-name">Jonathan Hargues</h1>
-            <p class="business-name">Test Business</p>
-            <p class="contact-content">test@test.com</p>
-            <p class="contact-content">548-784-9888</p>
+            <h1 class="contact-name">{{ vendor.vendor }}</h1>
+            <p class="business-name">{{ vendor.vendor_contact }}</p>
+            <p class="contact-content">{{ vendor.vendor_address1}}</p>
+            <p class="contact-content">{{ vendor.vendor_phone }}</p>
             <p class="btn-ptag"><button  class="edit-btn">Edit</button></p>
         </div>
+        {% endfor %}
     </div>
     {% endblock content2 %}    
 </body>
