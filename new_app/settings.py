@@ -67,7 +67,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
-        },
+        }
     },
 ]
 
@@ -79,10 +79,12 @@ WSGI_APPLICATION = 'new_app.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'OPTIONS': {
-            'read_default_file': os.path.join(BASE_DIR,'app.cnf'),
-        },
+        'ENGINE': 'sql_server.pyodbc',
+        'NAME': 'assetmgmt',
+        'USER': 'svcDjango@sql-feapps-01.flywheelenergy.com',
+        'PASSWORD': 'DJ@ngoUncha1n3d!',
+        'HOST': 'sql-feapps-01.flywheelenergy.com',
+        'PORT': '1433',
     }
 }
 
