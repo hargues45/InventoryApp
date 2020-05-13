@@ -85,6 +85,9 @@ DATABASES = {
         'PASSWORD': 'DJ@ngoUncha1n3d!',
         'HOST': 'sql-feapps-01.flywheelenergy.com',
         'PORT': '1433',
+        'OPTIONS': {
+            'driver': 'SQL Server Native Client 11.0',
+        },
     }
 }
 
@@ -127,9 +130,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR,'static')
+STATIC_ROOT = os.path.join(BASE_DIR,'static-files')
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
-    os.path.join(STATIC_ROOT, '..', 'static'),
+    # os.path.join(STATIC_ROOT, '..', 'static-files'),
 ]
