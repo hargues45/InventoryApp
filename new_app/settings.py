@@ -81,7 +81,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'sql_server.pyodbc',
         'NAME': 'assetmgmt',
-        'USER': 'svcDjango',
+        'USER': 'svcDjango@sql-feapps-01.flywheelenergy.com',
         'PASSWORD': 'DJ@ngoUncha1n3d!',
         'HOST': 'sql-feapps-01.flywheelenergy.com',
         'PORT': '1433',
