@@ -86,7 +86,8 @@ DATABASES = {
         'HOST': 'sql-feapps-01.flywheelenergy.com',
         'PORT': '1433',
         'OPTIONS': {
-            'driver': 'SQL Server Native Client 11.0',
+            # 'driver': 'SQL Server Native Client 11.0',
+            'driver': 'ODBC Driver 17 for SQL Server'
         },
     }
 }
