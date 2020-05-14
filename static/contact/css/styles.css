@@ -1,0 +1,61 @@
+.content-block {
+    z-index: 5;
+    background-color: rgba(255, 255, 255, 0);
+    height: 100%;
+    width: 100%;
+    position: absolute;  
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+
+.items {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+    width: 275px;
+    text-align: center;
+    height: 16.4rem;
+    line-height: 3.4rem;
+    margin: auto;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.contact-name {
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.business-name {    
+    color: grey;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact-content {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn-ptag {
+    margin: 0;
+}
+
+.edit-btn {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #3B84C5;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.edit-btn:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
