@@ -9,21 +9,50 @@
     overflow-y: scroll;
 }
 
-.items {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
-    width: 275px;
-    text-align: center;
-    height: 16.4rem;
+.flip-box {    
+    width: 220px;
+    height: 16.4rem;    
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1.9rem;    
     line-height: 3.4rem;
-    margin: 1rem 1.3rem;
-    background-color: white;
     border-radius: 5px;
+    background: transparent; 
+    perspective: 1000px;
+}
+
+.flip-box-inner {
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    text-align: center;    
+    border-radius: 5px;
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
+}
+
+.items, .item-back {
+    position: absolute;
+    height: 100%;
+    width: 100%;     
+    border-radius: 5px;   
+    backface-visibility: hidden;  
+}
+
+.items {
+    background-color: white;
+}
+
+.item-back {
+    background-color: white; 
+    transform: rotateY(180deg);
 }
 
 .contact-name {
     font-family: "Segoe UI",Arial,sans-serif;
     font-weight: 400;
-    font-size: 26px;
+    font-size: 25px;
 }
 
 .business-name {    
@@ -39,12 +68,14 @@
 
 .btn-ptag {
     margin: 0;
+    margin-top: .43rem;
+    display: flex;
+    flex-direction: row;
 }
 
 .edit-btn {
     border: none;
     outline: 0;
-    display: inline-block;
     padding: 8px;
     color: white;
     background-color: #3B84C5;
@@ -56,6 +87,119 @@
     border-bottom-right-radius: 5px;
 }
 
-.edit-btn:hover {
+.edit-btn:hover, .delete-btn:hover, .save-btn:hover {
     background-color: rgba(0, 0, 0, 0.6);
+}
+
+.delete-btn, .save-btn {
+    border: none;
+    outline: 0;
+    padding: 8px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    width: 50%;
+    height: 100%;
+    font-size: 18px;
+    
+}
+
+.delete-btn {      
+    background-color: red;  
+    border-bottom-right-radius: 5px;
+}
+
+.save-btn {
+    background-color:#4CA7DD;
+    border-bottom-left-radius: 5px;
+}
+
+.contact_update {
+    width: 75%;
+    height: 10%; 
+    padding: .25rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border-style: solid;
+}
+
+
+.side-nav {
+    height: 85vh;
+    width: 2rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    left: 16%;
+    z-index: 6;
+    display: flex;
+    flex-direction: row;
+    transition: 0.7s;
+}
+
+.side-nav-content {
+    height: 100%;
+    width: 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    transition: 0.7s;
+}
+
+.contact-btn {
+    color: white;
+    width: 0;
+    margin: 3rem 0;
+    margin-left: 2rem;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    opacity: 0;
+    transition: 0.6s;
+    white-space: nowrap;
+}
+
+.contact-btn:hover {    
+    background-color: #3B84C5;
+}
+
+.contact-btn:after {
+    content: '';
+    background: white;
+    position: absolute;
+    bottom: 85%;
+    left: 17%;
+    height: 1px;
+    width: 65%;
+}
+
+.side-nav-content1 {
+    height: 85vh;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.7s;
+}
+
+.arrow {
+    box-sizing: border-box;
+    height: 13px;
+    width: 13px;
+    margin: auto;
+    padding-right: 5px;
+    cursor: pointer;
+    border-style: solid;
+    border-color: white;
+    border-width: 0px 1px 1px 0px;
+    transform: rotate(-45deg);
+    transition: border-width 150ms ease-in-out;
+    transition: 0.7s;
+}
+
+.arrow:hover {
+  border-bottom-width: 4px;
+  border-right-width: 4px;
 }

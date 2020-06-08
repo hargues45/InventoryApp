@@ -1,0 +1,146 @@
+.content-block {
+    z-index: 5;
+    background-color: rgba(255, 255, 255, 0);
+    height: 100%;
+    width: 100%;
+    position: absolute;  
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+
+}
+
+.table-div {
+    width: 100%;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 2rem;
+    overflow-x: scroll;
+}
+
+#myInput{
+    margin: .5rem 0;
+    width: 50%;
+    height: 1.8rem;
+    padding: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+
+}
+
+#myTable {
+    border-collapse: collapse; 
+    width: 100%; 
+    border: 1px solid #ddd; 
+    font-size: 13px;
+}
+
+#myTable th {
+    font-family: "Lato", sans-serif;
+    color: #262626;
+    background-color: #4CA7DD;
+    border: 1px solid #262626;
+    text-align: center; 
+    padding: 12px; 
+  }
+
+  #myTable td {
+    font-family: "Lato", sans-serif;
+    color: black;
+    background-color: whitesmoke;
+    border: 1px solid #ddd;
+    text-align: center; 
+    padding: 12px;
+  }
+
+  #myTable tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #myTable tr.header, #myTable tr:hover {
+    background-color: #f1f1f1;
+  }
+
+.side-nav {
+    height: 85vh;
+    width: 2rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    left: 16%;
+    z-index: 6;
+    display: flex;
+    flex-direction: row;
+    transition: 0.7s;
+}
+
+.side-nav-content {
+    height: 100%;
+    width: 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    transition: 0.7s;
+}
+
+.contact-btn {
+    color: white;
+    width: 0;
+    margin: 3rem 0;
+    margin-left: 2rem;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    opacity: 0;
+    transition: width 0.7s;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+}
+
+.contact-btn:hover {    
+    background-color: #3B84C5;
+}
+
+.contact-btn:after {
+    content: '';
+    background: white;
+    position: absolute;
+    bottom: 85%;
+    left: 17%;
+    height: 1px;
+    width: 65%;
+}
+
+.side-nav-content1 {
+    height: 85vh;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.7s;
+}
+
+.arrow {
+    box-sizing: border-box;
+    height: 13px;
+    width: 13px;
+    margin: auto;
+    padding-right: 5px;
+    cursor: pointer;
+    border-style: solid;
+    border-color: white;
+    border-width: 0px 1px 1px 0px;
+    transform: rotate(-45deg);
+    transition: border-width 150ms ease-in-out;
+    transition: 0.7s;
+}
+
+.arrow:hover {
+  border-bottom-width: 4px;
+  border-right-width: 4px;
+}

@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block header %}
+    <title>FWE - Network</title>
+    <link rel='stylesheet' href="{% static 'inventory/css/styles1.css' %}" type="text/css">
+    {% endblock header %}
+</head>
+<body>
+    {% block content2 %}
+    <div class="content-block">   
+        <div class='table-div'>
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Devices...">
+            <table id="myTable">
+            <tr class="header">
+                <th class='headers'>Name</th>
+                <th class='headers'>Asset State</th>
+                <th class='headers'>Product</th>
+                <th class='headers'>Serial Number</th>
+                <th class='headers'>Location</th>
+                <th class='headers'>Site</th>
+                <th class='headers'>Building</th>
+                <th class='headers'>Room Code</th>
+                <th class='headers'>Contract Number</th>
+                <th class='headers'>Contract Expiry</th>
+                <th class='headers'>End of Sale</th>
+                <th class='headers'>End of Support</th>
+            </tr>
+        </div> 
+        <div class="side-nav">
+            <div class="side-nav-content">
+                <a class="contact-btn">Add Device Type</a>
+            </div>
+            <div class="side-nav-content1">
+                <div class="arrow" onclick=testTool()></div> 
+            </div>           
+        </div>
+    </div>
+    {% endblock content2 %}
+
+    {% block jscript %}
+    <script>
+        function testTool() {
+            if (document.querySelector('.side-nav').clientWidth === 32) {
+                document.querySelector('.arrow').addEventListener('click', openNav());
+            } else {
+                document.querySelector('.arrow').addEventListener('click', closeNav());
+            }
+        }
+
+        function openNav() {
+            const sideNav = document.querySelector(".side-nav"); 
+            sideNav.style.width = '14rem'
+            const sideNavContent = document.querySelector(".side-nav-content"); 
+            sideNavContent.style.width = '12rem'
+            const btn = document.querySelector('.contact-btn')
+            btn.style.width = '12.65rem'
+            btn.style.opacity = '1'  
+            const arrow = document.querySelector('.arrow') 
+            arrow.style.transform = 'rotate(135deg)'     
+        }
+
+        function closeNav() {
+            const sideNav = document.querySelector(".side-nav"); 
+            sideNav.style.width = '2rem'
+            const sideNavContent = document.querySelector(".side-nav-content"); 
+            sideNavContent.style.width = '0rem'
+            const btn = document.querySelector('.contact-btn')
+            btn.style.width = '-12.65rem' 
+            btn.style.opacity = '0'
+            const arrow = document.querySelector('.arrow') 
+            arrow.style.transform = 'rotate(-45deg)'          
+        }
+    </script>
+    {% endblock jscript %}
+    
+</body>
+</html>
