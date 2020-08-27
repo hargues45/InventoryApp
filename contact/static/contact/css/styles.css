@@ -3,20 +3,26 @@
     background-color: rgba(255, 255, 255, 0);
     height: 100%;
     width: 100%;
-    position: absolute;  
-    display: flex;
-    flex-wrap: wrap;
+    position: absolute; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    grid-template-rows: repeat(4, 16.4rem);
+    grid-gap: 1rem; 
+    /* display: flex;
+    flex-wrap: wrap; */
     overflow-y: scroll;
 }
 
 .items {
+    grid-column: span 1;
+    grid-row: span 1;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
     width: 275px;
     text-align: center;
     height: 16.4rem;
     line-height: 3.4rem;
     margin: auto;
-    background-color: white;
+    background-color: rgb(196, 196, 196);
     border-radius: 5px;
 }
 

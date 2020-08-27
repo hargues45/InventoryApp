@@ -21,6 +21,110 @@
     overflow-x: scroll;
 }
 
+.functions {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.function {
+    width: 50%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;    
+    align-items: center;
+    justify-content: space-around;
+}
+
+.paginationcontainer {
+    height: 100%;
+    width: 55%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.arrow-group {
+    width: 4rem;
+    height: 55%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: rgba(0, 0, 0, 0.9) 1px solid;
+}
+
+.arrow1 {
+    box-sizing: border-box;
+    height: 10px;
+    width: 10px;
+    margin: auto;
+    padding-right: 5px;
+    cursor: pointer;
+    border-style: solid;
+    border-color: #3B84C5;
+    border-width: 0px 2px 2px 0px;
+    transform: rotate(135deg);
+    transition: border-width 150ms ease-in-out;
+    transition: 0.7s;
+}
+
+.arrow2 {
+    box-sizing: border-box;
+    height: 10px;
+    width: 10px;
+    margin: auto;
+    padding-right: 5px;
+    cursor: pointer;
+    border-style: solid;
+    border-color: #3B84C5;
+    border-width: 0px 2px 2px 0px;
+    transform: rotate(-45deg);
+    transition: border-width 150ms ease-in-out;
+    transition: 0.7s;
+}
+
+.btn-group {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.delete-btn, .edit-btn {
+    height: 60%;
+    box-sizing: border-box;
+    border: 1px rgba(0, 0, 0, 0.9) solid;
+    font-family: "Lato", sans-serif;
+    padding: 4px;
+    margin-right: .7rem;
+    cursor: pointer;
+    background-color: #3B84C5;
+    color: whitesmoke;
+}
+
+.edit-btn:hover {
+    background-color: #262626;
+}
+
+.delete-btn:hover {
+    background-color: red;
+}
+
+.spans {
+    font-size: 1rem;
+    font-family: "Lato", sans-serif;
+}
+
+.pipes {
+    font-size: 2rem;
+    height: 90%;
+}
+
 #myInput{
     margin: .5rem 0;
     width: 50%;
@@ -28,7 +132,8 @@
     padding: 8px;
     border: 1px solid #ddd;
     font-size: 1rem;
-
+    box-sizing: border-box;
+    border: 1px #262626 solid;
 }
 
 #myTable {
@@ -38,14 +143,33 @@
     font-size: 13px;
 }
 
-#myTable th {
+.selection-header {
+    background-color: #3B84C5;
+    border: 1px solid #262626;
+    height: 100%;
+    width: 3%;
+}
+
+#selector {
+    width: 5%;
+    height: 100%;
+    cursor: default;
+    margin: 4px;
+}
+
+.header {
+    cursor: default;
+}
+
+.headers {
     font-family: "Lato", sans-serif;
-    color: #262626;
-    background-color: #4CA7DD;
+    color: whitesmoke;
+    background-color: #3B84C5;
     border: 1px solid #262626;
     text-align: center; 
     padding: 12px; 
-  }
+    cursor: default;
+  }  
 
   #myTable td {
     font-family: "Lato", sans-serif;
@@ -58,10 +182,6 @@
 
   #myTable tr {
     border-bottom: 1px solid #ddd;
-  }
-  
-  #myTable tr.header, #myTable tr:hover {
-    background-color: #f1f1f1;
   }
 
 .side-nav {
@@ -95,10 +215,11 @@
     padding: 10px;
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
-    display: block;
+    display: none;
     opacity: 0;
     transition: width 0.7s;
     transition: opacity 0.3s;
+    transition: display 0.7s;
     white-space: nowrap;
 }
 
@@ -140,7 +261,7 @@
     transition: 0.7s;
 }
 
-.arrow:hover {
+.arrow:hover, .arrow1:hover, .arrow2:hover {
   border-bottom-width: 4px;
   border-right-width: 4px;
 }

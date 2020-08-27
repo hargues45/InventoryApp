@@ -14,14 +14,41 @@
     {% block content2 %}
     <div class="content-block">   
         <div class='table-div'>
-            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Devices...">
+            <div class="functions">
+                <div class="function">
+                    <div class="btn-group">
+                        <a class='edit-btn'>Edit</a>
+                        <a class='delete-btn'>Delete</a>
+                    </div>
+                    <div class="paginationcontainer">
+                        <span class='spans' id='spantag'>1 - 17 of 17</span>
+                        <span class="pipes">|</span>
+                        <div class="arrow-group">
+                            <div class="arrow1"></div>
+                            <div class="arrow2"></div>
+                        </div> 
+                        <span class="pipes">|</span>
+                        <span class="spans">Show 25 per page
+                            <!-- <div class='drop'>
+                                <span class="number">25</span>
+                                <span class="number">50</span>
+                                <span class="number">100</span> -->
+                            <!-- </div>  -->
+                        </span> 
+                    </div>                  
+                </div>
+                <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search for Devices...">
+            </div>            
             <table id="myTable">
             <tr class="header">
+                <th class="selection-header">
+                    <input type='checkbox' id="selector" value="0">
+                </th>
                 <th class='headers'>Name</th>
                 <th class='headers'>Asset State</th>
                 <th class='headers'>Product</th>
                 <th class='headers'>Serial Number</th>
-                <th class='headers'>Location</th>
+                <th class='headers'>State</th>
                 <th class='headers'>Site</th>
                 <th class='headers'>Building</th>
                 <th class='headers'>Room Code</th>
@@ -33,7 +60,7 @@
         </div> 
         <div class="side-nav">
             <div class="side-nav-content">
-                <a class="contact-btn">Add Device Type</a>
+                <a class="contact-btn">Add Device</a>
             </div>
             <div class="side-nav-content1">
                 <div class="arrow" onclick=testTool()></div> 
@@ -59,7 +86,8 @@
             sideNavContent.style.width = '12rem'
             const btn = document.querySelector('.contact-btn')
             btn.style.width = '12.65rem'
-            btn.style.opacity = '1'  
+            btn.style.opacity = '1' 
+            btn.style.display = 'block' 
             const arrow = document.querySelector('.arrow') 
             arrow.style.transform = 'rotate(135deg)'     
         }
@@ -72,6 +100,7 @@
             const btn = document.querySelector('.contact-btn')
             btn.style.width = '-12.65rem' 
             btn.style.opacity = '0'
+            btn.style.display = 'none'
             const arrow = document.querySelector('.arrow') 
             arrow.style.transform = 'rotate(-45deg)'          
         }
